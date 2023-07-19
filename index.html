@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+#section1 {
+  height: 100vh;
+    display: flex;
+  justify-content: center; /* Center the video horizontally */
+  align-items: flex-start; /* Align the video at the top */
+  background-color: black;
+}
+
+#section2 {
+  height: 100vh;
+  background-color: black;
+}
+
+
+
+#banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+}
+
+#banner h1 {
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+body{
+  overflow-x: hidden;
+  font-family: Roboto, sans-serif;
+      background: #000000;
+
+}
+
+h1{
+  background: rgba(0,0,0,0);
+  color: white;
+}
+h3{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 56px;
+  margin-bottom: 0;
+
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 26px;
+}
+.video-container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Center the video horizontally */
+  align-items: flex-start; /* Align the video at the top */
+  
+}
+
+iframe {
+  position: absolute;
+  top: 0; /* Set top position to 0px */
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-50%); /* Use translateX for horizontal centering */
+  
+}
+
+#text{
+  position: absolute;
+  color: #FFFFFF;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Set initial opacity */
+  transition: opacity 0.3s ease; /* Add transition effect */
+  z-index: 1; /* Ensure the text is on top of the black overlay */
+  text-align: center; /* Center the text horizontally */
+}
+
+.video-container:hover #text {
+  opacity: 1; /* Change opacity on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  pointer-events: none; /* Make the overlay not clickable */
+  
+}
+
+.video-container:hover .overlay {
+  opacity: 0.6; /* Change opacity on hover */
+}
+
+.button-container button:hover {
+  background-color: #2d5986	;
+}
+
+.button-container {
+  position: relative;
+  top: -20px; /* Adjust the top position as needed */
+  text-align: center;
+}
+
+.button-container button {
+  background-color: #2F3841;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  margin-top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+
+  
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-container iframe {
+    height: 56.25vw;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-container iframe {
+    width: 177.78vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .video-container {
+    height: 400px;
+    align-items: center; /* Center the video vertically */
+    flex-direction: column; /* Stack the video and text vertically */
+  }
+  .video-container iframe {
+    height: 400px;
+  }
+
+
+  #text {
+height:400px;
+      opacity: 1; /* Set initial opacity */
+
+  }
+  h3{
+  font-size: 5vw;
+
+}
+h2 {
+  font-size: 3vw;
+}
+
+  .overlay {
+    position: absolute;
+    height: 400px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    transition: opacity 0.7s ease;
+  }
+  .button-container {
+    top: -20px; /* Adjust the top position as needed */
+  }
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+<div id="banner">
+  <h1>VFinal Filmes</h1>
+</div>
+<div class="main" id="section1">
+
+
+
+<div class="video-container">
+  <iframe src="https://www.youtube-nocookie.com/embed/Vs3_qt6lR7A?vq=hd1080&controls=0&autoplay=1&mute=1&playsinline=1&loop=1&rel=0&modestbranding=1&iv_load_policy=0&color=white" frameborder="0" ></iframe>
+  <div id="text">
+    <h3>Shoot for the stars</h3>
+    <div class="h2-container">
+      <h2>Reel VFinal Filmes</h2>
+      <div class="button-container">
+  <a href="#section2">
+    <button>Click Me</button>
+  </a>
+</div>
+    </div>
+  </div>
+  <div class="overlay"></div> <!-- Add the overlay element -->
+</div>
+</div>
+
+<div class="main" id="section2">
+  <h2>Section 2</h2>
+  <a href="#section1">Click Me</a>
+</div>
+
+<h1>teste1</h1>
+<h2>teste2</h2>
+
+
+</body>
+</html>
